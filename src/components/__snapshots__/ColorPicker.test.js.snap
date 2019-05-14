@@ -35,17 +35,5 @@ exports[`color picker renders a color picker 1`] = `
   >
     Green
   </button>
-  <div
-    style={
-      Object {
-        "background": "",
-        "display": "in-line-block",
-        "height": "100px",
-        "width": "100px",
-      }
-    }
-  >
-    CHANGE MY COLOR!
-  </div>
 </section>
 `;
