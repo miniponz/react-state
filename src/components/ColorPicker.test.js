@@ -9,22 +9,27 @@ describe('color picker', () => {
   });
 
   it('changes color to purple on click', () => {
-    const wrapper = shallow(<ColorPicker />);
-    wrapper.find('button').at(0).simulate('click', { target: { textContent: 'Purple' } });
+    const selectColorHandler = jest.fn();
+    const wrapper = shallow(<ColorPicker selectColorHandler={selectColorHandler}/>);
+    wrapper.find('button').at(0).simulate('click');
 
-    expect(wrapper.state('color')).toEqual('Purple');
+    expect(selectColorHandler).toHaveBeenCalledWith('purple');
   });
-  it('changes color to purple on click', () => {
-    const wrapper = shallow(<ColorPicker />);
-    wrapper.find('button').at(1).simulate('click', { target: { textContent: 'Blue' } });
 
-    expect(wrapper.state('color')).toEqual('Blue');
+  it('changes color to purple on click', () => {
+    const selectColorHandler = jest.fn();
+    const wrapper = shallow(<ColorPicker selectColorHandler={selectColorHandler}/>);
+    wrapper.find('button').at(1).simulate('click');
+
+    expect(selectColorHandler).toHaveBeenCalledWith('blue');
   });
-  it('changes color to purple on click', () => {
-    const wrapper = shallow(<ColorPicker />);
-    wrapper.find('button').at(2).simulate('click', { target: { textContent: 'Green' } });
 
-    expect(wrapper.state('color')).toEqual('Green');
+  it('changes color to purple on click', () => {
+    const selectColorHandler = jest.fn();
+    const wrapper = shallow(<ColorPicker selectColorHandler={selectColorHandler}/>);
+    wrapper.find('button').at(2).simulate('click');
+
+    expect(selectColorHandler).toHaveBeenCalledWith('green');
   });
 
 });
