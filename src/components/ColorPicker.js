@@ -7,9 +7,7 @@ export default class ColorPicker extends PureComponent {
   };
 
   handleClick = event => {
-    this.setState({ color: event.target.textContent }, () => {
-      console.log(this.state.color);
-    });
+    this.setState({ color: event.target.textContent });
   };
 
   render() {
@@ -21,7 +19,7 @@ export default class ColorPicker extends PureComponent {
         <button style={{ background: 'purple' }}onClick={this.handleClick}>Purple</button>
         <button style={{ background: 'blue' }}onClick={this.handleClick}>Blue</button>
         <button style={{ background: 'green' }}onClick={this.handleClick}>Green</button>
-        <span style={{ background: color, height: '100px', width: '100px', display: 'in-line-block' }}>block</span>
+        <div style={{ background: color, height: '100px', width: '100px', display: 'in-line-block' }}>CHANGE MY COLOR!</div>
       </section>
 
     );

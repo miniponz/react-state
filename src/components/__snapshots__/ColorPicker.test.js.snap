@@ -5,15 +5,47 @@ exports[`color picker renders a color picker 1`] = `
   <h1>
     Pick Colors!
   </h1>
-  <button>
+  <button
+    onClick={[Function]}
+    style={
+      Object {
+        "background": "purple",
+      }
+    }
+  >
     Purple
   </button>
-  <button>
+  <button
+    onClick={[Function]}
+    style={
+      Object {
+        "background": "blue",
+      }
+    }
+  >
     Blue
   </button>
-  <button>
+  <button
+    onClick={[Function]}
+    style={
+      Object {
+        "background": "green",
+      }
+    }
+  >
     Green
   </button>
-  <span />
+  <div
+    style={
+      Object {
+        "background": "",
+        "display": "in-line-block",
+        "height": "100px",
+        "width": "100px",
+      }
+    }
+  >
+    CHANGE MY COLOR!
+  </div>
 </section>
 `;
