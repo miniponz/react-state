@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`color picker renders a color picker 1`] = `
+<section>
+  <h1>
+    Pick Colors!
+  </h1>
+  <button>
+    Purple
+  </button>
+  <button>
+    Blue
+  </button>
+  <button>
+    Green
+  </button>
+  <span />
+</section>
+`;
