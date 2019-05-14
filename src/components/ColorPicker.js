@@ -8,9 +8,9 @@ function ColorPicker({ selectColorHandler }){
   return (
     <section>
       <h1>Pick Colors!</h1>
-      <button style={{ background: 'purple' }}onClick={() => selectColorHandler('purple')}>Purple</button>
-      <button style={{ background: 'blue' }}onClick={() => selectColorHandler('blue')}>Blue</button>
-      <button style={{ background: 'green' }}onClick={() => selectColorHandler('green')}>Green</button>
+      <button style={{ background: 'purple' }} onClick={() => selectColorHandler('purple')}>Purple</button>
+      <button style={{ background: 'blue' }} onClick={() => selectColorHandler('blue')}>Blue</button>
+      <button style={{ background: 'green' }} onClick={() => selectColorHandler('green')}>Green</button>
     </section>
   );
 }

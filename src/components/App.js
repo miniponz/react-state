@@ -9,6 +9,7 @@ export default class App extends PureComponent {
 
   selectColor = color => {
     this.setState({ color });
+    console.log(color);
   }  
 
   render() {  
