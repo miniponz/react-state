@@ -7,4 +7,6 @@ describe('color picker', () => {
     const wrapper = shallow(<RandomColor />);
     expect(wrapper).toMatchSnapshot();
   });
+
+  
 });

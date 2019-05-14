@@ -5,7 +5,7 @@ exports[`color picker renders a color picker 1`] = `
   <div
     style={
       Object {
-        "background": undefined,
+        "background": "",
         "height": "100px",
         "width": "100px",
       }

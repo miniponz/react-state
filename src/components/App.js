@@ -1,23 +1,8 @@
-import React, { PureComponent } from 'react';
-import ColorPicker from './ColorPicker';
-import ColorDisplay from './ColorDisplay';
+import React from 'react';
+import RandomColor from './RandomColor';
 
-export default class App extends PureComponent {
-  state = {
-    color: ''
-  };
-
-  selectColor = color => {
-    this.setState({ color });
-    console.log(color);
-  }  
-
-  render() {  
-    return (
-    <>
-    <ColorPicker selectColorHandler={this.selectColor}/>
-    <ColorDisplay color={this.state.color}/>
-    </>
-    );
-  }
+export default function App(){
+  return <RandomColor />;
 }
+
+//needs to use setInterval(RandomColor, 1000);
