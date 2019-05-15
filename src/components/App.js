@@ -1,24 +1,14 @@
 import React from 'react';
 import RandomColor from './RandomColor';
 import Header from './Header';
+// import Incrementer from './Incrementer';
 
 export default function App(){
   return (
- <>
+    <div style={ { textAlign: 'center' } }>
       <Header />
-    <div style={ { display: 'flex', flexWrap: 'wrap' } }>
-      <RandomColor refresh={200}/>
-      <RandomColor refresh={200}/>
-      <RandomColor refresh={200}/>
-      <RandomColor refresh={200}/>
-      <RandomColor refresh={200}/>
-      <RandomColor refresh={200}/>
-      <RandomColor refresh={200}/>
-      <RandomColor refresh={200}/>
-      <RandomColor refresh={200}/>
-      <RandomColor refresh={200}/>
+      <RandomColor />
     </div>
-    </>
   );
 }
 

@@ -3,6 +3,7 @@ import React, { PureComponent } from 'react';
 export default class RandomColor extends PureComponent {
   state = {
     color: '',
+    count: 1000
   }
 
   randomColor = () => {
@@ -11,23 +12,43 @@ export default class RandomColor extends PureComponent {
     return colors[num];
   }
 
+  decrement = () => {
+    this.setState(state => {
+      return { count: state.count - 100 };
+    });
+  }
+  increment = () => {
+    this.setState(state => {
+      return { count: state.count + 100 };
+    });
+
+  }
+
   componentDidMount() {
     this.intervalId = setInterval(() => {
       this.setState({ color: this.randomColor() });
-      console.log(this.state);
-      //eslint-disable-next-line
-    }, this.props.refresh);
+    }, this.state.count);
+  }
+  
+  componentDidUpdate() {
+    this.intervalId && clearInterval(this.intervalId);
+    this.intervalId = setInterval(() => {
+      this.setState({ color: this.randomColor() });
+      console.log(this.state.count);
+    }, this.state.count);
   }
 
-  //check the state {}
-  //if this.color and this.randomColor() are the same, 
-  //make the color black.
-
   render() {
-    const { color } = this.state;
+    const { color, count } = this.state;
+
     return (
       <>
-      <div style={ { background: color, height: '200px', width: '200px', display: 'flex' } }></div>
+      <div style={ { background: color, height: '100vh', width: '100vw', position: 'fixed', top: '0', zIndex: '-1' } }></div>
+        <p>Interval(ms): {count}</p>
+        <div style={ { display: 'flex', flexWrap: 'wrap', width: '100vw', justifyContent: 'center' } }>
+          <button onClick={this.decrement}>Make it Faster!</button>
+          <button onClick={this.increment}>Make it Slower!</button>
+        </div>
       </>
     );
   }

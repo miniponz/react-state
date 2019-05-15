@@ -1,13 +1,14 @@
 import React, { PureComponent } from 'react';
+import RandomColor from './RandomColor';
 
 export default class Incrementer extends PureComponent {
   state = {
-    count: 0
+    count: 1000
   }
 
   increment = () => {
     this.setState(state => {
-      return { count: state.count + 1 };
+      return { count: state.count - 100 };
     });
   }
 
@@ -17,7 +18,8 @@ export default class Incrementer extends PureComponent {
     return (
       <>
         <p>Count: {count}</p>
-        <button onClick={this.increment}>Increment Here!</button>
+        <button onClick={this.increment}>Make it Faster!</button>
+        <RandomColor refresh={count} />
       </>
     );
   }
