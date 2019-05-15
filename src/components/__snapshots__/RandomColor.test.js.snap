@@ -6,8 +6,9 @@ exports[`color picker renders a color picker 1`] = `
     style={
       Object {
         "background": "",
-        "height": "100px",
-        "width": "100px",
+        "display": "flex",
+        "height": "200px",
+        "width": "200px",
       }
     }
   />
