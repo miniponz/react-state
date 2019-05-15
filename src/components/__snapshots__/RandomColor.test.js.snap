@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`color picker renders a color picker 1`] = `
+<Fragment>
+  <div
+    style={
+      Object {
+        "background": "",
+        "display": "flex",
+        "height": "200px",
+        "width": "200px",
+      }
+    }
+  />
+</Fragment>
+`;
